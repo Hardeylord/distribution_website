@@ -7,25 +7,25 @@ const Whyus = () => {
       icon: Zap,
       h1: "24/7 Service",
       p: "Our customer service team is available around the clock to resolve issues, answer questions, and keep deliveries on track.",
-      bg_img:"/247.png"
+      bg_img:"https://res.cloudinary.com/dujx04o4m/image/upload/v1774563617/247_g8wygs.png"
     },
     {
       icon: Lock,
       h1: "Guranteed Security",
       p: "Every package is handled with care. Our trained team ensures goods arrive in perfect condition, every single time.",
-      bg_img:"/locked.png"
+      bg_img:"https://res.cloudinary.com/dujx04o4m/image/upload/v1774563624/locked_elcir0.png"
     },
     {
       icon: ClockFading,
       h1: "On-Time Delivery",
       p: "99% on-time delivery for all types of products, both long and short distance.",
-      bg_img:"/illustration.png"
+      bg_img:"https://res.cloudinary.com/dujx04o4m/image/upload/v1774563598/illustration_c4hxdx.png"
     },
     {
       icon: MapPinHouse,
       h1: "Nationwide Coverage",
       p: "Our distribution network spans across major cities and remote areas, ensuring no customer is too far to reach.",
-      bg_img:"/nwc.png"
+      bg_img:"https://res.cloudinary.com/dujx04o4m/image/upload/v1774563600/nwc_sadlrg.png"
     },
   ];
   return (
@@ -59,7 +59,9 @@ const Whyus = () => {
               <section className="rounded-full z-20 bg-[#d6d6d6] p-2 w-fit">
                 <Service.icon size={16} strokeWidth={1.25} />
               </section>
-              <div className={`bg-[url(${Service.bg_img})] absolute -left-8 bg-cover bg-no-repeat bg-center size-60`}/>
+              <div style={{
+                backgroundImage: `url(${Service.bg_img})`
+              }} className={` absolute -left-8 bg-cover bg-no-repeat bg-center size-60`}/>
               <div>
                 <h1 className="">{Service.h1}</h1>
                 <p className="text-[#575757] text-[13px]">{Service.p}</p>
