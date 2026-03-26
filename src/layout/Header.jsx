@@ -1,9 +1,14 @@
 import { ArrowRight, MoveRight } from "lucide-react";
-import React from "react";
+import React, { useContext } from "react";
 import styled from "styled-components";
 import { Link } from "react-router-dom";
-
+import { GlobalContext } from "../hooks/Globalhooks";
 export const Header = () => {
+  const { open, isOpen } = useContext(GlobalContext);
+
+  const expandMenu = () => {
+    isOpen(!open);
+  };
   const menu = [
     {
       name: "Home",
@@ -23,15 +28,31 @@ export const Header = () => {
   ];
   return (
     <>
-      <div className="flex p-2 px-10 w-full">
-        <div className="flex w-1/3 items-center">
+      <div className="flex bg-white fixed z-50 p-1 md:px-10 w-full border-b border-[#d6d6d6] md:border-b-0">
+        <div className="flex w-1/2 md:w-1/3 items-center">
           <img src="/logo.svg" className="size-11" alt="" srcset="" />
           <p className="text-[9px]">
             Aishat <br /> Multipurpose Ltd
           </p>
         </div>
 
-        <div className="flex w-1/3 items-center justify-between">
+        <div
+          onClick={expandMenu}
+          className="md:hidden flex flex-col gap-1.5 w-1/2 items-end justify-center"
+        >
+          <div
+            className={`h-0.5 w-10 bg-black transition-transform duration-300 ${
+              open ? "translate-y-2 rotate-45" : ""
+            }`}
+          />
+          <div
+            className={`h-0.5 w-10 bg-black transition-transform duration-300 ${
+              open ? "-translate-y-2 -rotate-45" : ""
+            }`}
+          />
+        </div>
+
+        <div className="hidden md:flex w-1/3 items-center justify-between">
           {menu.map((menu, index) => (
             <section className="cursor-pointer" key={index}>
               <p>{menu.name}</p>
@@ -39,13 +60,31 @@ export const Header = () => {
           ))}
         </div>
 
-        <div className="flex w-1/3 items-center justify-end">
+        <div className="hidden md:flex md:w-1/3 items-center justify-end">
           <StyledWrapper>
             <button className="button text-xs">Get in touch</button>
           </StyledWrapper>
           {/* <button className="flex items-center gap-2 rounded-full border py-0.5 px-2 text-xs cursor-pointer">
             Contact Us <ArrowRight strokeWidth={1.2} />
           </button> */}
+        </div>
+      </div>
+
+      {/* mobile menu */}
+      <div
+        className={`bg-white flex flex-col px-4 space-y-5 py-10 fixed z-40 top-13 w-full transition-transform duration-300 ease-in-out ${
+          open ? "translate-y-0" : "-translate-y-full"
+        }`}
+      >
+        {menu.map((menu, index) => (
+          <section className="cursor-pointer" key={index}>
+            <p className="text-5xl">{menu.name}</p>
+          </section>
+        ))}
+        <div className="flex items-center ">
+          <StyledWrapper>
+            <button className="button text-xs">Get in touch</button>
+          </StyledWrapper>
         </div>
       </div>
     </>

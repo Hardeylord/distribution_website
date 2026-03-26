@@ -30,15 +30,15 @@ const Whyus = () => {
   ];
   return (
     <>
-      <div className="w-full flex flex-col py-5 px-10 h-screen justify-between space-y-3">
+      <div className="w-full flex flex-col py-5 px-5 md:px-10 h-screen justify-between space-y-3">
         <section className="text-[#0b5c0d] flex items-center gap-1">
           <section className="rounded-full bg-[#0b5c0d] p-2 size-0.5"></section>{" "}
           Why Choose Us
         </section>
 
-        <div className="flex justify-between">
+        <div className="flex space-y-3 flex-col md:flex-row justify-between">
           <div className="md:w-1/2">
-            <h1 className="text-5xl">Distribution built for e-commerce,
+            <h1 className="text-3xl md:text-5xl">Distribution built for e-commerce,
             at every scale</h1>
           </div>
           <div className="md:w-1/2">
@@ -49,8 +49,8 @@ const Whyus = () => {
             </p>
           </div>
         </div>
-        {/* <div className={`bg-[url(/247.png)]  -left-8 bg-cover bg-no-repeat bg-center size-60`}/> */}
-        <div class="grid grid-cols-4 gap-4">
+        {/* <div className={`bg-[url(/illustration.png)]  -left-8 bg-cover bg-no-repeat bg-center size-60`}/> */}
+        <div class="grid md:grid-cols-4 gap-4">
           {services.map((Service, index) => (
             <div
               key={index}
@@ -61,7 +61,7 @@ const Whyus = () => {
               </section>
               <div className={`bg-[url(${Service.bg_img})] absolute -left-8 bg-cover bg-no-repeat bg-center size-60`}/>
               <div>
-                <h1>{Service.h1}</h1>
+                <h1 className="">{Service.h1}</h1>
                 <p className="text-[#575757] text-[13px]">{Service.p}</p>
               </div>
             </div>
