@@ -30,7 +30,7 @@ const Whyus = () => {
   ];
   return (
     <>
-      <div className="w-full flex flex-col py-5 px-5 md:px-10 h-screen justify-between space-y-3">
+      <div className="w-full flex flex-col py-5 px-5 md:px-10 h-screen justify-between space-y-3 md:mb-20">
         <section className="text-[#0b5c0d] flex items-center gap-1">
           <section className="rounded-full bg-[#0b5c0d] p-2 size-0.5"></section>{" "}
           Why Choose Us
@@ -42,14 +42,13 @@ const Whyus = () => {
             at every scale</h1>
           </div>
           <div className="md:w-1/2">
-            <p className="text-[#434343]">
+            <p className="text-[#434343] text-right">
               Aishat Multipurpose LTD delivers fast, reliable e-commerce
               distribution so you always get what you ordered — on time, every
               time.
             </p>
           </div>
         </div>
-        {/* <div className={`bg-[url(/illustration.png)]  -left-8 bg-cover bg-no-repeat bg-center size-60`}/> */}
         <div class="grid md:grid-cols-4 gap-4">
           {services.map((Service, index) => (
             <div
