@@ -20,7 +20,7 @@ export const Header = () => {
       name: "Service",
     },
     {
-      name: "Process",
+      name: "Proucts",
     },
     {
       name: "FAQ",

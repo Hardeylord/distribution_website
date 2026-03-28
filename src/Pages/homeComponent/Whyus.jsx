@@ -30,19 +30,19 @@ const Whyus = () => {
   ];
   return (
     <>
-      <div className="w-full flex flex-col py-5 px-5 md:px-10 h-screen justify-between space-y-3 md:mb-20">
+      <div className="w-full flex flex-col py-5 px-5 md:px-10 md:h-screen justify-between space-y-5 md:mb-20">
         <section className="text-[#0b5c0d] flex items-center gap-1">
-          <section className="rounded-full bg-[#0b5c0d] p-2 size-0.5"></section>{" "}
+          <section className="rounded-full bg-[#0b5c0d] p-1 size-0.5"></section>{" "}
           Why Choose Us
         </section>
 
         <div className="flex space-y-3 flex-col md:flex-row justify-between">
           <div className="md:w-1/2">
-            <h1 className="text-3xl md:text-5xl">Distribution built for e-commerce,
+            <h1 className="text-3xl md:text-4xl">Distribution built for e-commerce,
             at every scale</h1>
           </div>
           <div className="md:w-1/2">
-            <p className="text-[#434343] text-right">
+            <p className="text-[#434343] text-[15px] text-right">
               Aishat Multipurpose LTD delivers fast, reliable e-commerce
               distribution so you always get what you ordered — on time, every
               time.
