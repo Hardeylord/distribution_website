@@ -9,21 +9,32 @@ export const Header = () => {
   const expandMenu = () => {
     isOpen(!open);
   };
+
+  const navigate = (location) => {
+    isOpen(!open);
+    const id = location.replace("#", "");
+    document.getElementById(id)?.scrollIntoView({ behavior: "smooth" });
+  }
   const menu = [
     {
       name: "Home",
+      to:"#hero-section"
     },
     {
       name: "About Us",
+      to:"#about-us"
     },
     {
       name: "Service",
+      to:"#service"
     },
     {
-      name: "Proucts",
+      name: "Products",
+      to:"#products"
     },
     {
       name: "FAQ",
+      to:"#faq"
     },
   ];
   return (
@@ -54,7 +65,10 @@ export const Header = () => {
 
         <div className="hidden md:flex w-1/3 items-center justify-between">
           {menu.map((menu, index) => (
-            <section className="cursor-pointer" key={index}>
+            <section onClick={()=>{
+              const id = menu.to.replace("#", "")
+              document.getElementById(id)?.scrollIntoView({"behavior": "smooth"})
+            }} className="cursor-pointer" key={index}>
               <p>{menu.name}</p>
             </section>
           ))}
@@ -77,7 +91,7 @@ export const Header = () => {
         }`}
       >
         {menu.map((menu, index) => (
-          <section className="cursor-pointer" key={index}>
+          <section onClick={() => navigate(menu.to)} className="cursor-pointer" key={index}>
             <p className="text-5xl">{menu.name}</p>
           </section>
         ))}

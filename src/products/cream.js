@@ -1,0 +1,16 @@
+export const creams = [
+  { img: "/cream/carowhite.jpg", name: "Caro Plus 180g" },
+  { img: "", name: "Caro Plus 350g" },
+  { img: "", name: "Cusmada Jelly 75g" },
+  { img: "", name: "Cusmada Jelly 200g" },
+  { img: "", name: "Coconut Jelly 75g" },
+  { img: "", name: "Cocoa Butter Jelly 75g" },
+  { img: "", name: "Cocoa Butter Jelly 350g" },
+  { img: "", name: "Baby Jelly 75g" },
+  { img: "", name: "Freesia 125g" },
+  { img: "", name: "Freesia 275g" },
+  { img: "", name: "Freesia 450g" },
+  { img: "", name: "MSM B/S" },
+  { img: "", name: "MSM S/S" },
+  { img: "", name: "Hair Pomade" },
+];
