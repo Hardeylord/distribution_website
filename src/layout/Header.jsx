@@ -76,7 +76,9 @@ export const Header = () => {
 
         <div className="hidden md:flex md:w-1/3 items-center justify-end">
           <StyledWrapper>
-            <button className="button text-xs">Get in touch</button>
+            <button onClick={()=>{
+              document.getElementById("about-us").scrollIntoView({"behavior": "smooth"})
+            }} className="button text-xs">Get in touch</button>
           </StyledWrapper>
           {/* <button className="flex items-center gap-2 rounded-full border py-0.5 px-2 text-xs cursor-pointer">
             Contact Us <ArrowRight strokeWidth={1.2} />
@@ -97,7 +99,7 @@ export const Header = () => {
         ))}
         <div className="flex items-center ">
           <StyledWrapper>
-            <button className="button text-xs">Get in touch</button>
+            <button onClick={()=>navigate("#about-us")} className="button text-xs">Get in touch</button>
           </StyledWrapper>
         </div>
       </div>
